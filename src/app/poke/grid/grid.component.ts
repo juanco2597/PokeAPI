@@ -10,7 +10,6 @@ import { PokeService } from '../../service/poke.service';
 export class GridComponent{
 
   pokeList: Array<any> = []
-
   page: number = 0
 
   constructor(private pokeService: PokeService) {
@@ -18,7 +17,7 @@ export class GridComponent{
   }
 
   setData(){
-    this.pokeService.getList().subscribe((res:any)=>{
+      this.pokeService.getList(this.page).subscribe((res:any)=>{
       this.pokeList = res.results;
     })
   }

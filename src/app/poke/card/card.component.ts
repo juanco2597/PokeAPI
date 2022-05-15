@@ -9,9 +9,9 @@ import { PokeService } from '../../service/poke.service';
 export class CardComponent implements OnInit {
 
   @Input()
-  info:any
+  info: any = {name: ''};
 
-  url:string = ""
+  url:string = "";
 
   constructor(private pokemService: PokeService) { }
 
